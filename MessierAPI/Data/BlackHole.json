@@ -1,0 +1,68 @@
+[
+    {
+        "Nombre": "TON 618",
+        "Tipo": "Cuasar",
+        "Distancia": "10.4 mil millones de años luz",
+        "MasasSolares": "66,000,000,000 masas solares",
+        "Descripcion": "Uno de los agujeros negros más masivos conocidos. Para que te des una idea, el sistema solar entero entra dentro de él, y sobra espacio. Se trata de un quásar muy distante a varios miles de millones de años luz de aquí. Este brilla de manera descomunal, con una potencia de unos 1040 Watts; es decir, algo así como cien billones de veces la energía emitida por el Sol.",
+        "ImagenURL": "Assets/Bh/TON618.jpg",
+        "RadioSchwarzschild": "1300 UA",
+        "FechaDescubrimiento": "1957",
+        "Descubridor": "Allan Sandage"
+    },
+    {
+        "Nombre": "Sagitario A*",
+        "Tipo": "Supermasivo",
+        "Distancia": "26,000 años luz",
+        "MasasSolares": "4,300,000 masas solares",
+        "Descripcion": "El agujero negro supermasivo en el centro de la Vía Láctea. Sagitario A* (pronunciado Sagitario A estrella​) y abreviado 'Sgr A*' es el agujero negro supermasivo del centro galáctico de la Vía Láctea. Es una fuente de radio muy compacta y brillante en el centro de nuestra galaxia que forma parte de una estructura mayor llamada Sagitario A.",
+        "ImagenURL": "Assets/Bh/SagA.jpeg",
+        "RadioSchwarzschild": "0.08 UA",
+        "FechaDescubrimiento": "1974",
+        "Descubridor": "Bruce Balick y Robert Brown"
+    },
+    {
+        "Nombre": "M87*",
+        "Tipo": "Supermasivo",
+        "Distancia": "53.5 millones de años luz",
+        "MasasSolares": "6,500,000,000 masas solares",
+        "Descripcion": "El primer agujero negro en ser fotografiado. Este agujero negro supermasivo reside en una galaxia llamada Messier 87, o M87, a unos 54 millones de años luz de la Tierra. Un año luz es la distancia que recorre la luz en un año, 9,5 billones de kilómetros. Esta galaxia, con una masa de 6.500 millones de veces la de nuestro sol, es más grande y luminosa que nuestra Vía Láctea.",
+        "ImagenURL": "Assets/Bh/M87.jpg",
+        "RadioSchwarzschild": "120 UA",
+        "FechaDescubrimiento": "1918",
+        "Descubridor": "Heber Curtis"
+    },
+    {
+        "Nombre": "Cygnus X-1",
+        "Tipo": "Estelar",
+        "Distancia": "6,070 años luz",
+        "MasasSolares": "21.2 masas solares",
+        "Descripcion": "Cygnus X-1 (abreviado como Cyg X-1)​ es un agujero negro que crea una fuente muy brillante de rayos X​ situada en la constelación del Cisne. Fue descubierto en 1964 desde un detector de rayos X a bordo de un cohete suborbital Aerobee lanzado desde el White Sands Missile Range. Cyg X-1 es muy variable pero en rayos X duros (rayos X con energía de más de 30 keV) suele ser la fuente más brillante del cielo.",
+        "ImagenURL": "Assets/Bh/CygnusX1.jpg",
+        "RadioSchwarzschild": "0.062 UA",
+        "FechaDescubrimiento": "1964",
+        "Descubridor": "Riccardo Giacconi y equipo"
+    },
+    {
+        "Nombre": "NGC 1277",
+        "Tipo": "Supermasivo",
+        "Distancia": "220 millones de años luz",
+        "MasasSolares": "17,000,000,000 masas solares",
+        "Descripcion": "Está en el centro de una galaxia lenticular. Con una masa de aproximadamente (17.000 millones de masas solares), equivalente al 14% de la masa estelar total de la galaxia debido a los movimientos de las estrellas cerca del centro de la galaxia. Esto hace que el agujero negro en NGC 1277 sea uno de los más grandes conocidos, en relación con la masa de su galaxia de acogida.",
+        "ImagenURL": "Assets/Bh/NGC.png",
+        "RadioSchwarzschild": "340 UA",
+        "FechaDescubrimiento": "2012",
+        "Descubridor": "Remco van den Bosch y equipo"
+    },
+    {
+        "Nombre": "GRO J1655-40",
+        "Tipo": "Estelar",
+        "Distancia": "11,000 años luz",
+        "MasasSolares": "5.4 masas solares",
+        "Descripcion": "Un agujero negro estelar en un sistema binario. En el caso del gas que rodea a GRO J1655-40, por ejemplo, se ha descubierto un inusual parpadeo a una frecuencia de 450 veces por segundo. Dada una estimación previa de masa para el objeto central de unas siete veces la masa de nuestro Sol, la frecuencia del rápido parpadeo puede ser explicada por un agujero negro que esté rotando muy rápidamente.",
+        "ImagenURL": "Assets/Bh/Blackhole_systemGRO_J1655-40.jpg",
+        "RadioSchwarzschild": "0.016 UA",
+        "FechaDescubrimiento": "1994",
+        "Descubridor": "BATSE equipo"
+    }
+]

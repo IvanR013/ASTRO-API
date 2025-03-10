@@ -1,0 +1,27 @@
+# Build Folders
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+
+# Logs and databases
+*.log
+*.db
+
+# Temporary files
+*.tmp
+*.cache
+*.bak
+*.swp
+
+# HTTP files
+*.http
+
+# Development configuration
+*.Development.json
+
+# VS Code folder
+.vscode/
+
