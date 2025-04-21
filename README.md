@@ -39,6 +39,6 @@ Este proyecto es una API desarrollada en ASP.NET Core que sirve datos del Catál
 - **Archivos Estáticos**:
   - Configuración para servir archivos estáticos desde la carpeta `wwwroot/Assets`.
 
-## Ejemplo de Uso
+## Ejemplo de Uso (Pendiente de deploy)
 
-Para obtener la lista completa de objetos del Catálogo Messier, puedes realizar una solicitud GET a la siguiente URL:
+Para obtener la lista completa de objetos del Catálogo Messier, puedes realizar una solicitud GET a la siguiente URL: 
