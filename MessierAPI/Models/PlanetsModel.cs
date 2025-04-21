@@ -1,6 +1,5 @@
 
-namespace MessierAPI.Models
-{
+namespace MessierAPI.Models;
 
 public class PlanetsModel
 {
@@ -25,4 +24,3 @@ public class PlanetsModel
 
 }
 
-}

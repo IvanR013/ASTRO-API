@@ -1,5 +1,6 @@
 using Microsoft.Extensions.FileProviders;
-using System.IO;
+using MessierAPI.Repositories;
+
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -20,6 +21,8 @@ builder.Services.AddCors(options =>
 
 // Add controllers
 builder.Services.AddControllers();
+
+builder.Services.AddScoped<IJsonDataRep, JsonDataRep>();
 
 var app = builder.Build();
 

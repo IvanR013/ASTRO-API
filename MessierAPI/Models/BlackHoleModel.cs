@@ -1,6 +1,6 @@
 
-namespace MessierAPI.Models
-{
+namespace MessierAPI.Models;
+
    public class BlackHoleModel
 {
     public string Nombre { get; set; } = string.Empty;
@@ -15,4 +15,3 @@ namespace MessierAPI.Models
     
 }
 
-}

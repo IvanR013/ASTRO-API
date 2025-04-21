@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
+using MessierAPI.Repositories;
 using MessierAPI.Models;
+using MessierAPI.Exceptions;
 
 namespace MessierAPI.Controllers;
 
@@ -9,35 +10,48 @@ namespace MessierAPI.Controllers;
 [Route("api/[controller]")]
 public class PlanetsController : ControllerBase
 {
-    private readonly List<PlanetsModel> _planets;
+    private readonly IJsonDataRep _objects;
 
-    public PlanetsController()
-    {
-        var JsonData = Path.Combine(Directory.GetCurrentDirectory(), "Data", "Planets.json");
-        _planets = JsonConvert.DeserializeObject<List<PlanetsModel>>(System.IO.File.ReadAllText(JsonData)) ?? new List<PlanetsModel>();
-    }
+    public PlanetsController(IJsonDataRep objects) => this._objects = objects;
+
 
     [HttpGet("Data")]
     public IActionResult GetPlanets()
     {
-        if (!_planets.Any()) return NotFound(new { message = "No se encontraron datos." });
+        try
+        {
+            List<PlanetsModel>? PlanetObjects = _objects.GetPlanets();
 
-        return Ok(new { Status = "Success", Data = _planets });
+            if (PlanetObjects is null) return BadRequest(new { message = "No se encontraron datos." });
+
+            return Ok(new { Status = "Success", Data = PlanetObjects });
+        }
+        catch (DataNotFoundException err)
+        {
+            return StatusCode(500, new { Error = "hubo un error al encontrar datos.", err });
+        }
     }
-
-
-
 
     [HttpGet("{tipo}")]
     public IActionResult GetType(string tipo)
     {
-        PlanetsModel? Objeto = _planets.FirstOrDefault(n => n.Tipo.ToLower() == tipo.ToLower());
+        try
+        {
+            List<PlanetsModel>? PlanetObject = _objects.GetPlanets(tipo);
+            if (PlanetObject is null) return NotFound(new { message = "No se encontraron datos." });
 
-        if (Objeto is null) return NotFound(new { message = "No se encontraron datos." });
+            return Ok(new { Status = "Success", Data = PlanetObject });
+        }
+        catch (DataNotFoundException err)
+        {
+            return StatusCode(500, new { Error = "hubo un error al encontrar datos.", err });
+        }
 
-        return Ok(new { Status = "Success", Data = Objeto });
     }
 }
+
+
+
 
 
 

@@ -1,7 +1,9 @@
 using MessierAPI.Models;
 using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
+using MessierAPI.Repositories;
+using MessierAPI.Exceptions;
 
+// http://localhost:5034/api/Messier/Data
 
 namespace MessierAPI.Controllers;
 
@@ -9,34 +11,43 @@ namespace MessierAPI.Controllers;
 [Route("api/[controller]")]
 public class MessierController : ControllerBase
 {
-    private readonly List<MessierModel> _messier;
-    public MessierController()
-    {
-        var JsonData = Path.Combine(Directory.GetCurrentDirectory(), "Data", "Messier.json");
-        _messier = JsonConvert.DeserializeObject<List<MessierModel>>(System.IO.File.ReadAllText(JsonData)) ?? new List<MessierModel>();
-    }
+    private readonly IJsonDataRep _objects;
+    public MessierController(IJsonDataRep objects) => this._objects = objects;
 
     //General Delivery data.
     [HttpGet("Data")]
     public IActionResult GetMessierObjects()
     {
-        if (!_messier.Any()) return NotFound(new { message = "No se encontraron datos." });
+        try
+        {
+            List<MessierModel>? MessierObjects = _objects.GetMessierObjects();
 
-        return Ok(new { Status = "Success", Data = _messier });
+            if (MessierObjects is null) return BadRequest(new { message = "No se encontraron datos." });
+
+            return Ok(new { Status = "Success", Data = MessierObjects });
+        }
+        catch (DataNotFoundException err)
+        {
+            return StatusCode(500, new { Error = "hubo un error al encontrar datos.", err });
+        }
     }
-
-
-
 
     //This endpoint tracks with a type filter.
     [HttpGet("{tipo}")]
     public IActionResult GetMessierObject(string tipo)
     {
-        MessierModel? Objeto = _messier.FirstOrDefault(n => n.Tipo.ToLower() == tipo.ToLower());
+        try
+        {
+            List<MessierModel>? MessierObject = _objects.GetMessierObjects(tipo);
+            if (MessierObject is null) return NotFound(new { message = "No se encontraron datos." });
 
-        if (Objeto is null) return NotFound(new { message = "No se encontraron datos." });
-        
-        return Ok(new { Status = "Success", Data = Objeto });
+            return Ok(new { Status = "Success", MessierObject });
+        }
+        catch (DataNotFoundException err)
+        {
+            return StatusCode(500, new { Error = "hubo un error al encontrar datos.", err });
+        }
+
     }
 
 }
