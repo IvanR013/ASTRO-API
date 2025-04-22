@@ -1,4 +1,4 @@
-# API del Catálogo Messier y Agujeros Negros
+# ASTRO API 
 
 Este proyecto es una API desarrollada en ASP.NET Core que sirve datos del Catálogo Messier y de agujeros negros conocidos. La API permite realizar operaciones CRUD (Crear, Leer, Actualizar, Eliminar) sobre los datos de ambos catálogos, proporcionando una interfaz para acceder y manipular la información de estos objetos astronómicos.
 
@@ -12,13 +12,8 @@ Este proyecto es una API desarrollada en ASP.NET Core que sirve datos del Catál
    - `MessierModel`: Define la estructura de los datos para los objetos del Catálogo Messier.
    - `BlackHoleModel`: Define la estructura de los datos para los agujeros negros.
 
-3. **Servicios**:
-   - `IMessierService` y `MessierService`: Servicio para manejar la lectura y escritura de datos del Catálogo Messier desde un archivo JSON.
-   - `IBlackHoleService` y `BlackHoleService`: Servicio para manejar la lectura y escritura de datos de los agujeros negros desde un archivo JSON.
-
-4. **Configuración de la Aplicación**:
-   - `Program.cs`: Configura los servicios y el middleware de la aplicación.
-   - `appsettings.json`: Archivo de configuración de la aplicación.
+3. **Repositorios**:
+- `‎IJsonDataRep`: Centraliza el llamado y la lectura de los json con los datos de cada controlador. Es escalable y está desacoplado del resto de la api.
 
 ## Funcionalidades
 
