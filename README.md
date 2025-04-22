@@ -1,4 +1,4 @@
-# ASTRO API 
+#                                                                   ASTRO API 
 
 Este proyecto es una API desarrollada en ASP.NET Core que sirve datos del Catálogo Messier, planetas del sistema solar y de agujeros negros conocidos. La API te facilita estos datos en tu frontend, ideal para proyectos web donde necesites consumir y mostrar correctamente los datos como: Imágenes de todos los objetos mencionados, datos de observación, físicos y dinámicos.  
 
