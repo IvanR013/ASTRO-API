@@ -17,13 +17,10 @@ Este proyecto es una API desarrollada en ASP.NET Core que sirve datos del Catál
 
 ## Funcionalidades
 
-- **Operaciones CRUD**:
-  - Obtener la lista completa de objetos del Catálogo Messier y de agujeros negros.
-  - Obtener un objeto específico del Catálogo Messier por su ID.
-  - Obtener un agujero negro específico por su tipo.
-  - Crear nuevos objetos en el Catálogo Messier y nuevos agujeros negros.
-  - Actualizar objetos existentes en el Catálogo Messier y agujeros negros.
-  - Eliminar objetos del Catálogo Messier y agujeros negros.
+- **Endpoint de listado completo y de filtrado por ID**:
+- Por ej: api/Messier/Data - Devuelve todos los datos relativos al catálogo Messier.
+- Y api/Messier/{tipo(cuasar, nebulosa, planeta. etc)} - Devuelve datos según el tipo que se especifique.
+
 
 - **CORS**:
   - Configuración de CORS para permitir solicitudes desde cualquier origen, método y encabezado.
