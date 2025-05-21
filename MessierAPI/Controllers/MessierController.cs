@@ -39,7 +39,8 @@ public class MessierController : ControllerBase
         try
         {
             List<MessierModel>? MessierObject = _objects.GetMessierObjects(tipo);
-            if (MessierObject is null) return NotFound(new { message = "No se encontraron datos." });
+
+            if (MessierObject is null) return BadRequest(new { message = "No se encontraron datos." });
 
             return Ok(new { Status = "Success", MessierObject });
         }

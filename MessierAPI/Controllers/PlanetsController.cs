@@ -38,6 +38,7 @@ public class PlanetsController : ControllerBase
         try
         {
             List<PlanetsModel>? PlanetObject = _objects.GetPlanets(tipo);
+            
             if (PlanetObject is null) return NotFound(new { message = "No se encontraron datos." });
 
             return Ok(new { Status = "Success", Data = PlanetObject });
