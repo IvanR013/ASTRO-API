@@ -2,6 +2,16 @@
 
  API desarrollada en ASP.NETCore que sirve datos del Catálogo Messier, planetas del sistema solar y de algunos agujeros negros conocidos. La API te facilita estos datos en tu frontend, ideal para proyectos web donde necesites consumir y mostrar correctamente los datos como: Imágenes de todos los objetos mencionados, datos de observación, físicos y dinámicos.
 
+## Principales endpoints
+
+### Estas son las Urls que deberías consumir en tu front
+
+- ##### Datos sobre el catálogo Messier: <https://astro-api-0cj7.onrender.com/api/Messier/Data>
+
+- ##### Datos sobre Agujeros Negros: <https://astro-api-0cj7.onrender.com/api/BlackHole/Data>
+
+- ##### Datos sobre Planetas: <https://astro-api-0cj7.onrender.com/api/Planets/Data>
+
 ## Estructura del Proyecto
 
  **Controladores**: Maneja las solicitudes http exponiendo y validando la información con dos endpoints en todos los controladores.
@@ -27,7 +37,7 @@
 - Por ej: api/Messier/Data - Devuelve todos los datos relativos al catálogo Messier.
 - Y api/Messier/{tipo(cuasar, nebulosa, planeta. etc)} - Devuelve datos según el tipo que se especifique.
 
-## Ejemplo de Uso en tu front (Pendiente de deploy)
+## Ejemplo de Uso en tu front
 
 ``` JavaScript
 document.addEventListener('DOMContentLoaded', () => {
@@ -39,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 async function cargarDatosBh() {
     try {
-        const response = await fetch('http://exampleURL:5034/api/Blackhole/Data');
+        const response = await fetch('https://astro-api-0cj7.onrender.com/api/Messier/Data');
         const result = await response.json();
 
         console.log('Resultado completo:', result); 
