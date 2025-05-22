@@ -4,7 +4,6 @@ WORKDIR /src
 
 COPY *.sln ./
 COPY MessierAPI/*.csproj ./MessierAPI/
-COPY MessierAPI.Tests/*.csproj ./MessierAPI.Tests/
 
 RUN dotnet restore
 
