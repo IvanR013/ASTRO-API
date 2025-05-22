@@ -15,8 +15,8 @@ RUN dotnet publish MessierAPI.csproj -c Release -o /app/publish
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
 WORKDIR /app
 COPY --from=build /app/publish .
+COPY MessierAPI/wwwroot ./wwwroot 
 
-# Render expone el puerto por variable de entorno PORT
 ENV ASPNETCORE_URLS=http://+:$PORT
 EXPOSE 10000
 

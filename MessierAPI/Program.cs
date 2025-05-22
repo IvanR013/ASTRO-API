@@ -38,10 +38,6 @@ app.UseRouting();
 
 app.MapControllers(); // Mapea los controladores
 
-app.UseStaticFiles(new StaticFileOptions
-{
-    FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Assets")),
-    RequestPath = "/Assets"
-});
+app.UseStaticFiles();
 
 app.Run();
